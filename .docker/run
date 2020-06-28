@@ -1,5 +1,5 @@
 #!/bin/sh
+composer install --classmap-authoritative --no-dev
 php artisan config:cache && php artisan route:cache
-composer install --classmap-authoritative
 service nginx restart
 php-fpm
